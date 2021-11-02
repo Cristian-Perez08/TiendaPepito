@@ -6,7 +6,7 @@ const registerProd = async (req, res) => {
 
   const existinProd = await prod.findOne({ name: req.body.name });
 
-  if (existinProd) return res.status(400).send("The producto already exist");
+  if (existinProd) return res.status(400).send("El Producto ya existe");
 
   const prodSchema = new prod({
     name: req.body.name,
